@@ -1,0 +1,30 @@
+{% block content %}
+<table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Reports</th>
+      <th>Team Lead</th>
+      <th>No. of hours</th>
+      <th>Today's Progress</th>
+      <th>Progress file</th>
+      <th>Concern if any</th>
+      <th>Next Plan</th>
+      <th>Next Plan Doc</th>
+    </tr>
+    {% for field in form %}
+    <tr>
+      <td>{{ field.name }}</td>
+      <td>{{ field.date }}</td>
+      <td>{{ field.report }}</td>
+      <td>{{ field.lead }}</td>
+      <td>{{ field.hours }}</td>
+      <td>{{ field.progress }}</td>
+      <td>{{ field.progfile }}</td>
+      <td>{{ field.concern }}</td>
+      <td>{{ field.next_plan }}</td>
+      <td>{{ field.planfile }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endblock %}
